@@ -221,6 +221,7 @@ void StepApplyToSchedule(const Step& step, Array<te::Stage>* stages, StageToAxes
 String StepPrintAsPythonAPI(const Step& step, Array<te::Stage>* stages,
                             StageToAxesMap* stage_to_axes, te::Schedule* schedule,
                             const Array<Step>& transform_steps);
+
 /********** Primitives working on single stage **********/
 
 /*!
@@ -556,7 +557,7 @@ class FollowSplitStep : public Step {
    * \param n_split The number of split level.
    */
   FollowSplitStep(int stage_id, int iter_id, int src_step_id, int n_split);
-  
+
   /*!
    * \brief The constructor used to read a step record from JSONReader and create the
    * corresponding step.
@@ -573,7 +574,7 @@ class FollowSplitStep : public Step {
 class FollowFusedSplitStepNode : public StepNode {
  public:
   /*! \brief The id of the iter to split. */
-  int iter_id; 
+  int iter_id;
   /*! \brief The indices of the split steps to follow in the history. */
   Array<Integer> src_step_ids;
   /*! \brief  Use the length in this split level. */
