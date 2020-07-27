@@ -221,6 +221,7 @@ void StepApplyToSchedule(const Step& step, Array<te::Stage>* stages, StageToAxes
 String StepPrintAsPythonAPI(const Step& step, Array<te::Stage>* stages,
                             StageToAxesMap* stage_to_axes, te::Schedule* schedule,
                             const Array<Step>& transform_steps);
+
 /********** Primitives working on single stage **********/
 
 /*!
